@@ -60,7 +60,7 @@ function Dashboard({ user }) {
   if (filtro === 'especialista') columna = 'especialista'
 
   const { data, error } = await supabase
-    .from('citaslashes')
+    .from('citasnails')
     .select('*')
     .ilike(columna, `%${query}%`) // 🔥 búsqueda en BD
     .order('fecha', { ascending: false })
